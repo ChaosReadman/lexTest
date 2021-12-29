@@ -1,0 +1,9 @@
+verb is am are was were be being been do eat love run stand sleep talk told did does will would can could have has had go went gone
+noun dog cat horse cow
+adv very simply gently quietly calmly angrily pretty cool
+prep to from behind above below between
+conj if then and but or
+adj their my your his her its
+pron I you he she we they
+
+I love her dog and you love his cat
