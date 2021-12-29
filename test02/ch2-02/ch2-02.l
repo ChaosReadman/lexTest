@@ -9,7 +9,16 @@ eol \n
 {eol}  {charCount++; lineCount++; }
 . charCount++;
 %%
-int main(void){
+int main(int argc, char *argv[]){
+    if (argc > 1){
+        FILE *file;
+        file = fopen(argv[1],"r");
+        if(!file){
+            fprintf(stderr,"オープンできませんでした %s \n",argv[1]);
+            exit(1);
+        }
+        yyin = file;
+    }
     yylex();
     printf ("\nlineCount = %d, wordCount = %d, charCount = %d\n",lineCount,wordCount, charCount);
     return 0;
