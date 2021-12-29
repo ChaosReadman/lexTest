@@ -1,0 +1,18 @@
+verb is am are was were be being been do
+         is
+is: 動詞
+noun dog cat horse cow
+    verb chew eat lick
+   verb run stand sleep
+   dog run
+dog: 名詞
+ run: 動詞
+chew eat sleep cow horse
+chew: 動詞
+ eat: 動詞
+ sleep: 動詞
+ cow: 名詞
+ horse: 名詞
+verb talk
+ talk
+talk: 動詞
