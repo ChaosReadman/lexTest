@@ -1,0 +1,4 @@
+verb is am are was were be being been do eat
+noun dog cat horse cow I you he she me
+verb talk told
+dog eat cat
