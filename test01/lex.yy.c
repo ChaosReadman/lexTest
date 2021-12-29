@@ -479,9 +479,10 @@ char *yytext;
 #line 1 "ch1-02.l"
 #line 2 "ch1-02.l"
     /*
+    * めっちゃ簡単サンプル（動詞か動詞ではないかの判定）
     */
-#line 484 "lex.yy.c"
 #line 485 "lex.yy.c"
+#line 486 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -698,10 +699,10 @@ YY_DECL
 		}
 
 	{
-#line 5 "ch1-02.l"
+#line 6 "ch1-02.l"
 
 
-#line 705 "lex.yy.c"
+#line 706 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -760,69 +761,69 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 7 "ch1-02.l"
-
+#line 8 "ch1-02.l"
+/* 空白やTABを無視 */
 	YY_BREAK
 case 2:
-#line 10 "ch1-02.l"
-case 3:
 #line 11 "ch1-02.l"
-case 4:
+case 3:
 #line 12 "ch1-02.l"
-case 5:
+case 4:
 #line 13 "ch1-02.l"
-case 6:
+case 5:
 #line 14 "ch1-02.l"
-case 7:
+case 6:
 #line 15 "ch1-02.l"
-case 8:
+case 7:
 #line 16 "ch1-02.l"
-case 9:
+case 8:
 #line 17 "ch1-02.l"
-case 10:
+case 9:
 #line 18 "ch1-02.l"
-case 11:
+case 10:
 #line 19 "ch1-02.l"
-case 12:
+case 11:
 #line 20 "ch1-02.l"
-case 13:
+case 12:
 #line 21 "ch1-02.l"
-case 14:
+case 13:
 #line 22 "ch1-02.l"
-case 15:
+case 14:
 #line 23 "ch1-02.l"
-case 16:
+case 15:
 #line 24 "ch1-02.l"
-case 17:
+case 16:
 #line 25 "ch1-02.l"
-case 18:
+case 17:
 #line 26 "ch1-02.l"
-case 19:
+case 18:
 #line 27 "ch1-02.l"
-case 20:
+case 19:
 #line 28 "ch1-02.l"
+case 20:
+#line 29 "ch1-02.l"
 case 21:
 YY_RULE_SETUP
-#line 28 "ch1-02.l"
-{ printf("%s: is a verb\n", yytext); }
+#line 29 "ch1-02.l"
+{ printf("%s: は動詞\n", yytext); }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 29 "ch1-02.l"
-{ printf("%s: is not a verb\n", yytext); }
+#line 30 "ch1-02.l"
+{ printf("%s: は動詞ではない\n", yytext); }
 	YY_BREAK
 case 23:
 /* rule 23 can match eol */
 YY_RULE_SETUP
-#line 30 "ch1-02.l"
-{ ECHO; /* */ }
+#line 31 "ch1-02.l"
+{ ECHO; /* .や改行は単純に出力する */ }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 31 "ch1-02.l"
+#line 32 "ch1-02.l"
 ECHO;
 	YY_BREAK
-#line 826 "lex.yy.c"
+#line 827 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1827,7 +1828,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 31 "ch1-02.l"
+#line 32 "ch1-02.l"
 
 int main(void)
 {

@@ -1,10 +1,11 @@
 %{
     /*
+    * めっちゃ簡単サンプル（動詞か動詞ではないかの判定）
     */
 %}
 %%
 
-[\t ]+
+[\t ]+      /* 空白やTABを無視 */
 
 is |
 am |
@@ -25,14 +26,15 @@ could |
 has |
 have |
 had |
-go { printf("%s: is a verb\n", yytext); }
-[a-zA-Z]+ { printf("%s: is not a verb\n", yytext); }
-.|\n   { ECHO; /* */ }
+go { printf("%s: は動詞\n", yytext); }
+[a-zA-Z]+ { printf("%s: は動詞ではない\n", yytext); }
+.|\n   { ECHO; /* .や改行は単純に出力する */ }
 %%
 int main(void)
 {
     yylex();
     return 0;
 }
+
 int yywrap(){return(1);}
 
