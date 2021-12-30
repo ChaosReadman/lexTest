@@ -1,4 +1,3 @@
 # lexTest
-lexのテストです。
-普通にlexを使って、普通にgccでコンパイルします。
-WSLにVSCODEからつないで、お試し中
+lex & Yacc プログラミングのコードをUbuntu20.04LTSで動くように修正したもの
+https://iss.ndl.go.jp/books/R100000002-I000002412297-00
