@@ -465,6 +465,8 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "ch2-06.l"
 #line 2 "ch2-06.l"
+#define YY_SKIP_YYWRAP
+int yywrap();
 #define YY_NO_INPUT
 #undef input
 #undef unput
@@ -473,9 +475,9 @@ void unput(int ch);
 unsigned int verbose;
 unsigned int fname;
 char *progName;
-#line 477 "lex.yy.c"
-
 #line 479 "lex.yy.c"
+
+#line 481 "lex.yy.c"
 
 #define INITIAL 0
 #define FNAME 1
@@ -693,9 +695,9 @@ YY_DECL
 		}
 
 	{
-#line 14 "ch2-06.l"
+#line 16 "ch2-06.l"
 
-#line 699 "lex.yy.c"
+#line 701 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -754,40 +756,40 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 15 "ch2-06.l"
+#line 17 "ch2-06.l"
 /* ignore blanks */
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 16 "ch2-06.l"
+#line 18 "ch2-06.l"
 /* ignore blanks */
 	YY_BREAK
 case 3:
-#line 19 "ch2-06.l"
+#line 21 "ch2-06.l"
 case 4:
-#line 20 "ch2-06.l"
+#line 22 "ch2-06.l"
 case 5:
 YY_RULE_SETUP
-#line 20 "ch2-06.l"
+#line 22 "ch2-06.l"
 {
-    printf("usage is: %s [-help|-h|-?][-verbose|-v][(-file|-f) filename]\n", progName);
+    printf("usage is: %s [-help|-h|-?] [-verbose|-v] [(-file|-f) filename]\n", progName);
 }
 	YY_BREAK
 case 6:
-#line 25 "ch2-06.l"
+#line 27 "ch2-06.l"
 case 7:
 YY_RULE_SETUP
-#line 25 "ch2-06.l"
+#line 27 "ch2-06.l"
 {
     printf("verbose mode is on\n");
     verbose = 1;
 }
 	YY_BREAK
 case 8:
-#line 31 "ch2-06.l"
+#line 33 "ch2-06.l"
 case 9:
 YY_RULE_SETUP
-#line 31 "ch2-06.l"
+#line 33 "ch2-06.l"
 {
     BEGIN FNAME; fname = 1;
 }
@@ -795,7 +797,7 @@ YY_RULE_SETUP
 case 10:
 /* rule 10 can match eol */
 YY_RULE_SETUP
-#line 35 "ch2-06.l"
+#line 37 "ch2-06.l"
 {
     printf("use file %s\n", yytext);
     BEGIN 0;
@@ -805,15 +807,15 @@ YY_RULE_SETUP
 case 11:
 /* rule 11 can match eol */
 YY_RULE_SETUP
-#line 41 "ch2-06.l"
+#line 43 "ch2-06.l"
 ECHO;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 42 "ch2-06.l"
+#line 44 "ch2-06.l"
 ECHO;
 	YY_BREAK
-#line 817 "lex.yy.c"
+#line 819 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 case YY_STATE_EOF(FNAME):
 	yyterminate();
@@ -1819,7 +1821,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 42 "ch2-06.l"
+#line 44 "ch2-06.l"
 
 char **targv;
 char **arglim;

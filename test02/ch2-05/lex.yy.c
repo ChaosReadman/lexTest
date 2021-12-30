@@ -448,6 +448,9 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "ch2-05.l"
 #line 2 "ch2-05.l"
+#define YY_SKIP_YYWRAP
+int yywrap(void);
+
 #define YY_NO_INPUT
 #undef input
 #undef unput
@@ -455,8 +458,8 @@ int input(void);
 void unput(int ch);
 unsigned int verbose;
 char *progName;
-#line 459 "lex.yy.c"
-#line 460 "lex.yy.c"
+#line 462 "lex.yy.c"
+#line 463 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -673,10 +676,10 @@ YY_DECL
 		}
 
 	{
-#line 11 "ch2-05.l"
+#line 14 "ch2-05.l"
 
 
-#line 680 "lex.yy.c"
+#line 683 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -734,21 +737,21 @@ do_action:	/* This label is used only to access EOF actions. */
 			goto yy_find_action;
 
 case 1:
-#line 14 "ch2-05.l"
+#line 17 "ch2-05.l"
 case 2:
-#line 15 "ch2-05.l"
+#line 18 "ch2-05.l"
 case 3:
 YY_RULE_SETUP
-#line 15 "ch2-05.l"
+#line 18 "ch2-05.l"
 {
-    printf("usage is: %s [-help|-h|-?][-verbose|-v][(-file|-f) filename]\n", progName);
+    printf("usage is: %s [-help|-h|-?] [-verbose|-v] [(-file|-f) filename]\n", progName);
 }
 	YY_BREAK
 case 4:
-#line 20 "ch2-05.l"
+#line 23 "ch2-05.l"
 case 5:
 YY_RULE_SETUP
-#line 20 "ch2-05.l"
+#line 23 "ch2-05.l"
 {
     printf("verbose mode is on\n");
     verbose = 1;
@@ -756,10 +759,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 24 "ch2-05.l"
+#line 27 "ch2-05.l"
 ECHO;
 	YY_BREAK
-#line 763 "lex.yy.c"
+#line 766 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1764,7 +1767,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 24 "ch2-05.l"
+#line 27 "ch2-05.l"
 
 char **targv;
 char **arglim;
@@ -1804,3 +1807,4 @@ void unput(int ch)
 }
 
 int yywrap(){return(1);}
+

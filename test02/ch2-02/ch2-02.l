@@ -1,4 +1,6 @@
 %{
+#define YY_SKIP_YYWRAP
+int yywrap();
 unsigned charCount = 0, wordCount = 0, lineCount = 0;
 %}
 

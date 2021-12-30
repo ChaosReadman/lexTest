@@ -1,4 +1,6 @@
 %{
+#define YY_SKIP_YYWRAP
+int yywrap();
 unsigned int verbose;
 char *progName;
 %}

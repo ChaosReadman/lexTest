@@ -1,4 +1,7 @@
 %{
+#define YY_SKIP_YYWRAP
+int yywrap(void);
+
 #define YY_NO_INPUT
 #undef input
 #undef unput

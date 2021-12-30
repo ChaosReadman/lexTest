@@ -1,6 +1,6 @@
 ファイルを引数で渡す(複数ファイル可）  
 ./a.out filename[enter]  
-
+この例でようやくまともな wwrap を自前で用意することになる。
 例）  
 ./a.out ch2-03.l README.md lex.yy.c  
 lineCount =       77, wordCount =      246, charCount =     2027 fileName = ch2-03.l  

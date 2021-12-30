@@ -438,9 +438,11 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "ch2-02.l"
 #line 2 "ch2-02.l"
+#define YY_SKIP_YYWRAP
+int yywrap();
 unsigned charCount = 0, wordCount = 0, lineCount = 0;
-#line 443 "lex.yy.c"
-#line 444 "lex.yy.c"
+#line 445 "lex.yy.c"
+#line 446 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -657,9 +659,9 @@ YY_DECL
 		}
 
 	{
-#line 7 "ch2-02.l"
+#line 9 "ch2-02.l"
 
-#line 663 "lex.yy.c"
+#line 665 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -718,26 +720,26 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 8 "ch2-02.l"
+#line 10 "ch2-02.l"
 {wordCount++; charCount+= yyleng; }
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 9 "ch2-02.l"
+#line 11 "ch2-02.l"
 {charCount++; lineCount++; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 10 "ch2-02.l"
+#line 12 "ch2-02.l"
 charCount++;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 11 "ch2-02.l"
+#line 13 "ch2-02.l"
 ECHO;
 	YY_BREAK
-#line 741 "lex.yy.c"
+#line 743 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1742,7 +1744,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 11 "ch2-02.l"
+#line 13 "ch2-02.l"
 
 int main(int argc, char *argv[]){
     if (argc > 1){
