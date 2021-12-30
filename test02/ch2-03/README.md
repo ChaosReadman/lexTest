@@ -1,7 +1,9 @@
-標準入力からカウントする場合は  
-./a.out[enter]  
-aiueo kakikukeko[CTRL+D CTRL+D]  
-lineCount = 0, wordCount = 1, charCount = 5  
-ファイルをカウントする場合は    
-./a.out ch2-02.l[enter]  
-lineCount = 26, wordCount = 71, charCount = 602  
+ファイルを引数で渡す(複数ファイル可）  
+./a.out filename[enter]  
+
+例）  
+./a.out ch2-03.l README.md lex.yy.c  
+lineCount =       77, wordCount =      246, charCount =     2027 fileName = ch2-03.l  
+lineCount =        6, wordCount =       26, charCount =      267 fileName = README.md  
+lineCount =     1813, wordCount =     6464, charCount =    46123, fileName = lex.yy.c  
+totalLC =     1896, totalWC =     6736, totalCC =    48417  
