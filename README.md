@@ -8,3 +8,8 @@ ubuntu20.04.LTSでは以下の様にリンクが貼られている。
 /usr/bin/yacc -> /etc/alternatives/yacc  
 /etc/alternatives/yacc -> /usr/bin/bison.yacc  
 となっており、中身はシェルスクリプトでyacc流に合わせてbisonを動かしている。  
+
+
+Cの書き方が古すぎて、コードの品質も納得できない所が多いが、
+そもそも動かないところもあるので、
+元のコードをあまり直さないまま、動くように修整している。
