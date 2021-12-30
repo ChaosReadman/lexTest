@@ -1781,9 +1781,8 @@ int main(int argc, char **argv){
         totalWC += wordCount;
         totalLC += lineCount;
         printf ("totalLC = %8lu, totalWC = %8lu, totalCC = %8lu\n",totalLC, totalWC, totalCC);
-        
     }else{
-        printf ("klineCount = %8lu, wordCount = %8lu, charCount = %8lu\n",lineCount, wordCount, charCount);
+        printf ("lineCount = %8lu, wordCount = %8lu, charCount = %8lu\n",lineCount, wordCount, charCount);
     }
     return 0;
 }
@@ -1800,14 +1799,15 @@ int yywrap(void)
         charCount = wordCount = lineCount = 0;
         fclose(yyin);
     }
-    while(fileList[currentFile] != (char*)0){
+    while(currentFile < nFiles){
         file = fopen(fileList[currentFile++], "r");
         if(file != NULL){
             yyin = file;
-            break;
+            return 0;
         }
         fprintf(stderr, "オープンできませんでした %s\n",fileList[currentFile - 1]);
     }
-    return (file!=NULL ? 0 : 1);
+    
+    return 1;
 }
 
