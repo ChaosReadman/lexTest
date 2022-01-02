@@ -722,30 +722,33 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 7 "ch3-01.l"
-{ yylval = atoi(yytext); return NUMBER; }
+{
+    yylval = atoi(yytext);  /* yacc側に渡すyylvalを用意する */
+    return NUMBER;
+ }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 8 "ch3-01.l"
+#line 11 "ch3-01.l"
 ;         /* ignore whitespace */
 	YY_BREAK
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 9 "ch3-01.l"
+#line 12 "ch3-01.l"
 return 0;   /* ignore EOF */
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 10 "ch3-01.l"
+#line 13 "ch3-01.l"
 return yytext[0];
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 11 "ch3-01.l"
+#line 14 "ch3-01.l"
 ECHO;
 	YY_BREAK
-#line 749 "lex.yy.c"
+#line 752 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1750,7 +1753,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 11 "ch3-01.l"
+#line 14 "ch3-01.l"
 
 
 int yywrap(){return(1);}
