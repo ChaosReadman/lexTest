@@ -7,10 +7,9 @@ void yyerror(const char *s);
 %}
 
 
-%token NAME NUMBER
+%token NUMBER
 %%
-statement: NAME '=' expression
-    | expression { printf("= %d\n", $1); }
+statement: expression { printf("= %d\n", $1); }
     ;
 
 expression: NUMBER '+' NUMBER   { $$ = $1 + $3; }
@@ -23,6 +22,7 @@ expression: NUMBER '+' NUMBER   { $$ = $1 + $3; }
 int main(void)
 {
     if(yyparse()){
+        /* yaccのつくったyyparse()からlexの作るyylex()が呼び出される */
         fprintf(stderr, "error\n");
         return 1;
     }

@@ -21,10 +21,12 @@ extern FILE *yyin;
 
 int main(int argc, char *argv[])
 {
+    /* yyinは標準入力ではなく、引数をファイルとしてオープンして割り当てる */
     yyin = fopen(argv[1],"r");
     if (!yyin){
         printf("%s のオープン失敗\n", argv[1]);
     }
+    // ファイルの終わりになるまでyyparseを繰り返す。
     while(!feof(yyin)){
         yyparse();
     }
