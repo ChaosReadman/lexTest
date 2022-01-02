@@ -1372,20 +1372,14 @@ yyreduce:
 #line 1373 "y.tab.c"
     break;
 
-  case 12:
-#line 43 "ch3-03.y"
-                                    { (yyval.dval) = (yyvsp[0].dval); }
-#line 1379 "y.tab.c"
-    break;
-
   case 13:
 #line 44 "ch3-03.y"
                                     { (yyval.dval) = vbltable[(yyvsp[0].vblno)]; }
-#line 1385 "y.tab.c"
+#line 1379 "y.tab.c"
     break;
 
 
-#line 1389 "y.tab.c"
+#line 1383 "y.tab.c"
 
       default: break;
     }

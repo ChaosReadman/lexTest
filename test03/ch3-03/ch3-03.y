@@ -6,7 +6,7 @@ int yylex();
 void yyerror(const char *s);
 double vbltable[26];
 %}
-%union{
+%union {
     double dval;
     int vblno;
 }
@@ -40,7 +40,7 @@ expression: expression '+' expression   { $$ = $1 + $3; }
             }
     |  '-' expression %prec UMINUS  { $$ = -$2; }
     |  '(' expression ')'           { $$ = $2; }
-    |       NUMBER                  { $$ = $1; }
+    | NUMBER
     | NAME                          { $$ = vbltable[$1]; }
     ;
 
