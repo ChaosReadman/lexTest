@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
         printf("%s のオープン失敗\n", argv[1]);
     }
     while(!feof(yyin)){
+        /* yyparseからyylexが呼ばれる */
         yyparse();
     }
     return 0;
