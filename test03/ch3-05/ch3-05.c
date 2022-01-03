@@ -1,5 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
 #include "ch3hdr.h"
 
 struct symtab *symlook(char *s)
@@ -16,4 +18,20 @@ struct symtab *symlook(char *s)
     }
     yyerror("Too many symbols");
     exit(1);
+}
+
+void addfunc(char *name, double(*func)(double))
+{
+    struct symtab *sp = symlook(name);
+    sp->funcptr = func;
+}
+
+
+int main(void)
+{
+    addfunc("sqrt",sqrt);
+    addfunc("exp",exp);
+    addfunc("log",log);
+
+    yyparse();
 }
